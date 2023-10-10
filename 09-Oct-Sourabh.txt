@@ -1,0 +1,240 @@
+package com.edu;
+import java.util.Scanner;
+public class GradeMain {
+
+	int marks;
+	void getData() {
+		
+		Scanner sc=new Scanner(System.in);
+		 marks =sc.nextInt();
+	}
+	void display() {
+		if ( marks<0 || marks>100) 
+			System.out.println("Invalid Inputs");
+		else if ( marks >=80 && marks <=100)
+			System.out.println("Grade A");
+		else if ( marks >=60 && marks <80)
+			System.out.println("Grade B");
+		else if ( marks >=40 && marks <60)
+			System.out.println("Grade C");
+		else if ( marks >=0 && marks <40)
+			System.out.println("Fail");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GradeMain gradeMain =new GradeMain ();
+		gradeMain.getData();
+		gradeMain.display();
+		
+		
+	}
+
+}
+///////////////////////////////////////////////////////////////////////////
+
+
+package com.edu;
+import java.util.Scanner;
+public class GetMarks {
+	
+	char grade;
+	void getData() {
+		
+		Scanner sc= new Scanner (System.in);
+		grade=sc.next().toUpperCase().charAt(0);
+		
+	}
+	void display() {
+		
+		if ( grade=='A')
+			System.out.println("Your marks in between 100-80 ");
+		else if ( grade=='B')
+			System.out.println("Your marks in between 60-79 ");
+		else if ( grade=='C')
+			System.out.println("Your marks in between 40-59 ");
+		else if ( grade=='D')
+			System.out.println("You are fail ");
+		else 
+			System.out.println("Invalid gread");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		GetMarks getMarks =new GetMarks();
+		getMarks.getData();
+		getMarks.display();
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+package com.edu;
+import java.util.Scanner;
+public class CaseMain {
+
+;
+double n1,n2,ans;
+static Scanner sc = new Scanner(System.in);
+void getDtata() {
+
+	System.out.println("Enter the numer");
+	n1=sc.nextDouble();
+	n2=sc.nextDouble();
+}
+
+void add() {
+	ans=n1+n2;
+	System.out.println("addition is :"+ans);
+	}
+void substract() {
+	ans=n1-n2;
+	System.out.println("substraction is :"+ans);
+	}
+void multi() {
+	ans=n1*n2;
+	System.out.println("substraction is :"+ans);
+	}
+void division() {
+	if (n2==0) {
+		System.out.println("Divide by 0 error");
+
+	}
+	else {
+	ans=n1/n2;
+	System.out.println("substraction is :"+ans);
+	}
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.println();
+System.out.println("Enter youe choise");
+System.out.println("1.for addition");
+System.out.println("2.for substraction");
+System.out.println("3.for multiplication");
+System.out.println("4.for division");
+CaseMain caseMain =new CaseMain();
+int choice= CaseMain.sc.nextInt();
+caseMain.getDtata();
+switch (choice) {
+case 1:	
+	caseMain.add();
+	break;
+case 2:
+	caseMain.substract();
+	break;
+	
+case 3:
+	caseMain.multi();
+	break;
+	
+case 4:
+	caseMain.division();
+	break;
+	
+default :
+		System.out.println("Invalid choise");
+}
+
+	}
+
+}
+///////////////////////////////////////////////////////////////////////////////
+
+package com.edu;
+import java.util.Scanner;
+public class AreaOfDifferentshape {
+static Scanner sc =new Scanner (System.in);
+void Rectangle() {
+	int l,b,ans;
+	System.out.println("Enter the lenght & breadth ");
+	l=sc.nextInt();
+	b=sc.nextInt();
+	ans=l*b;
+	System.out.println("Area of rectangle is :"+ans);
+}
+void squre() {
+	int s,ans;
+	System.out.println("Enter the size ");
+	s=sc.nextInt();
+	
+	ans=s*s;
+	System.out.println("Area of rectangle is :"+ans);
+}
+void trinagle() {
+	double b,h,ans;
+	System.out.println("Enter the base & height ");
+	b=sc.nextDouble();
+	h=sc.nextInt();
+	ans=0.5*b*h;
+	System.out.println("Area of rectangle is :"+ans);
+}
+void circle() {
+	double r,ans;
+	System.out.println("Enter the redius ");
+	r=sc.nextDouble();
+	
+	ans=3.14*r*r;
+	System.out.println("Area of rectangle is :"+ans);
+}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stu
+		System.out.println("Enter youe choise");
+		System.out.println("1.for Area of Rectangle");
+		System.out.println("2.for Area of Squre");
+		System.out.println("3.for Area of Triangle");
+		System.out.println("4.for Area of circle");
+		AreaOfDifferentshape areaOfDifferentshape =new AreaOfDifferentshape();
+		int choice= CaseMain.sc.nextInt();
+		switch (choice) {
+		case 1:	
+			areaOfDifferentshape.Rectangle();
+			break;
+		case 2:
+			areaOfDifferentshape.squre();
+			break;
+		case 3:
+			areaOfDifferentshape.trinagle();
+			break;
+		case 4:
+			areaOfDifferentshape.circle();
+			break;
+		default :
+				System.out.println("Invalid choise");
+		}
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package com.edu;
+import java.util.Scanner;
+public class OddEven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		OddEven oddEven=new OddEven();
+		
+		int num;
+		num=sc.nextInt();
+		switch (num%2) {
+		
+		case 0:
+			System.out.println("the number is even");
+			break;
+			
+		case 1:
+			System.out.println("the number is odd");
+			break;
+			
+			default:
+				System.out.println("Invalid data");
+				
+		}
+	}
+
+}
+////////////////////////////////////////////////////////////////////////////////////////////

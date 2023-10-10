@@ -1,0 +1,239 @@
+package com.encapsulation;
+import java.util.Scanner;
+
+class Student{
+	int age;
+	String name;//null
+	//static variable , class variable
+	static String clgname = "SITCOE";
+	
+	void inputStudentData() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter name ");
+		name = sc.nextLine();
+		
+		System.out.println("enter age ");
+		age = sc.nextInt();
+	}
+	
+	void Display() {
+		System.out.println("name= "+this.name); 
+		System.out.println("age= "+this.age);
+		System.out.println("college name= "+this.clgname);//this refers to present object
+	}
+}
+
+public class StudentMainApp {
+
+	public static void main(String[] args) {
+		Student s1 = new Student();//object class constructor
+		Student s2 = new Student();
+		s1.inputStudentData();
+		s2.inputStudentData();
+		s1.Display();
+		s2.Display();
+		String n;
+		
+		/*System.out.println("name= "+s1.name); 
+		System.out.println("age= "+s1.age);
+		System.out.println("college name= "+s1.clgname);*/
+		
+		/*System.out.println("name= "+s2.name); 
+		System.out.println("age= "+s2.age);
+		System.out.println("college name= "+s2.clgname);*/
+		
+
+	}
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//ENCAPSULATION DECLARATION
+package com.encapsulation;
+
+import java.util.Scanner;
+
+class Employee{
+	//variables declared in class are called instance variables
+	int age;
+	String name;
+	float salary;
+	char gen;
+	
+	void inputData() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter name");
+		//name = sc.next(); //single string word
+		name = sc.nextLine(); //with space i.e. more than one word
+		
+		System.out.println("Enter age");
+		age = sc.nextInt(); //int datatype
+		
+		System.out.println("Enter salary");
+		salary = sc.nextFloat(); //
+		
+		System.out.println("Enter gender M/F");
+		gen = sc.next().charAt(0); //read char
+	}
+	
+	void displayData() {
+		System.out.println("Employee Details : \n");
+		System.out.println("Name : "+name);
+		System.out.println("Age : "+age);
+		System.out.println("Salary : "+salary);
+		System.out.println("Gender : "+gen);
+	}
+}
+
+public class MainAppEncapsulation {
+
+	public static void main(String[] args) {
+		//create an object and call methods
+		System.out.println("Main Method");
+		
+		Employee emp = new Employee();
+		emp.inputData();
+		emp.displayData();
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package s0310;
+
+import java.util.Scanner;
+
+public class InputUser {
+
+	public static void main(String[] args) {
+		
+		int age;
+		String name;
+		float salary;
+		char gen;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter name");
+		//name = sc.next(); //single string word
+		name = sc.nextLine(); //with space i.e. more than one word
+		
+		System.out.println("Enter age");
+		age = sc.nextInt(); //int datatype
+		
+		System.out.println("Enter salary");
+		salary = sc.nextFloat(); //
+		
+		System.out.println("Enter gender M/F");
+		gen = sc.next().charAt(0); //read char
+		
+		System.out.println("Employee Details : \n");
+		System.out.println("Name : "+name);
+		System.out.println("Age : "+age);
+		System.out.println("Salary : "+salary);
+		System.out.println("Gender : "+gen);
+		sc.close();
+		
+
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+package s0310;
+
+
+public class Area {
+
+	public static void main(String[] args) {
+
+		int l,b,side,arear,areas;
+		double rad, areac;
+		l=12;
+		b=30;
+		side=12;
+		rad=7;
+		arear=l*b;
+		System.out.println("The area of rectangle is "+arear);
+		areas=side*side;
+		System.out.println("The area of square is "+areas);
+		areac=3.14*rad*rad;
+		System.out.println("The area of circle is "+areac);
+
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+package s0310;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		byte b; //declaration
+		//b=128; cannot take this value because it is beyond limits
+		b=127; //initialization
+		System.out.println("value of b= "+b); 
+
+	}
+
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+
+package com.encapsulation;
+import java.util.Scanner;
+
+class Product{
+	int pid;
+	String pname;
+	float pprice;
+	static String ComName = "Wipro";
+	
+	void InputData() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter product id ");
+		pid = sc.nextInt();
+		
+		System.out.println("Enter product name ");
+		pname = sc.next();
+		
+		System.out.println("Enter product price ");
+		pprice = sc.nextFloat();
+	}
+	
+	void DisplayData() {
+		System.out.println("Product id = "+this.pid);
+		System.out.println("Product name = "+this.pname);
+		System.out.println("Product price = "+this.pprice);
+		System.out.println("Company name = "+this.ComName);
+	}
+	
+}
+
+public class CompanyProduct {
+
+	public static void main(String[] args) {
+		
+		Product p1 = new Product();
+		Product p2 = new Product();
+		Product p3 = new Product();
+		Product p4 = new Product();
+		Product p5 = new Product();
+		
+		p1.InputData();
+		p2.InputData();
+		p3.InputData();
+		p4.InputData();
+		p5.InputData();
+		
+		p1.DisplayData();
+		p2.DisplayData();
+		p3.DisplayData();
+		p4.DisplayData();
+		p5.DisplayData();
+		
+
+	}
+
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////

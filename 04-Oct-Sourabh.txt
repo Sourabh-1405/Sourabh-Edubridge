@@ -1,0 +1,274 @@
+package s0410;
+
+public class Operators {
+
+	public static void main(String[] args) {
+		int a,b,c;
+		//c=a++ + ++b;
+		//c=11+10  //b=11
+		a=10;b=10;
+		System.out.println("sum="+a+b);
+		System.out.println(a+b+"sum=");
+		System.out.println("sum="+(a+b));
+
+	}
+
+}
+////////////////////////////////////////////////////////////////////////////
+
+
+package s0410;
+import java.util.Scanner;
+
+
+public class NegativeOrPositive {
+	int num;
+	
+	void InputData() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no");
+		num = sc.nextInt();
+	}
+	
+	void DisplayData() {
+		if(num>0)
+		{
+			System.out.println("The num is positive");
+		}
+		else
+		{
+			System.out.println("The num is negative");
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		NegativeOrPositive check = new NegativeOrPositive();
+		check.InputData();
+		check.DisplayData();
+				
+
+	}
+
+}
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+package s0410;
+import java.util.Scanner;
+
+public class LargestTernary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*int n1,n2,n3,l;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 3 no");
+		n1=sc.nextInt();
+		n2=sc.nextInt();
+		n3=sc.nextInt();
+		//l=(n1>n2)?n1:n2;
+		l=(n1>n2 && n1>n3)?n1: (n2>n1 && n2>n3)?n2:n3;
+		System.out.println("The largest of "+n1 +" , "+n3+ " and "+n2 +" is "+l);*/
+		
+		
+		//for 4 no
+		int n1,n2,n3,n4,l;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 4 no");
+		n1=sc.nextInt();
+		n2=sc.nextInt();
+		n3=sc.nextInt();
+		n4=sc.nextInt();
+		//l=(n1>n2)?n1:n2;
+		l=(n1>n2 && n1>n3 && n1>n4)?n1: (n2>n1 && n2>n3 && n2>n4)?n2: (n3>n1 && n3>n2 && n3>n4)?n3:n4;
+		System.out.println("The largest of "+n1 +" , "+n2+ " , "+n3 +" and " + n4+ " is "+l);
+	}
+
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package s0410;
+
+import java.util.Scanner;
+
+public class Largest2 {
+int num1,num2;
+	
+	void Input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter First number");
+		num1 = sc.nextInt();
+		System.out.println("Enter Second number");
+		num2 = sc.nextInt();
+
+	}
+	
+	void Display() {
+		if(num1>num2)
+		{
+			System.out.println(num1+" is greater than "+num2);
+		}
+		else
+		{
+			System.out.println(num2+" is greater than "+num1);
+		}
+	}
+
+
+	public static void main(String[] args) {
+		
+		Largest2 number = new Largest2();
+		number.Input();
+		number.Display();
+
+	}
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package s0410;
+import java.util.Scanner;
+
+public class Large3 {
+	int num1,num2,num3;
+	
+	void Input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter first number");
+		num1 = sc.nextInt();
+		System.out.println("Enter second number");
+		num2 = sc.nextInt();
+		System.out.println("Enter third number");
+		num3 = sc.nextInt();
+	}
+	
+	void Display() {
+		if(num1>num2 && num1>num3)
+		{
+			System.out.println(num1+" is greater than "+num2+" and "+num3);
+		}
+		else if(num2>num1 && num2>num3)
+		{
+			System.out.println(num2+" is greater than "+num1+" and "+num3);
+		}
+		else
+		{
+			System.out.println(num3+" is greater than "+num1+" and "+num2);
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		Large3 number = new Large3();
+		number.Input();
+		number.Display();
+
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+package s0410;
+import java.util.Scanner;
+
+public class EvenOdd {
+int num;
+	
+	void Input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number");
+		num = sc.nextInt();
+	}
+	
+	void Display() {
+		if(num==0) 
+		{
+			System.out.println("The number is zero");
+			
+		}
+		else
+		{
+		if(num/2 == 0)
+		{
+			System.out.println("The number is Even");
+		}
+		else
+		{
+			System.out.println("The number is Odd");
+		}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		EvenOdd number = new EvenOdd();
+		number.Input();
+		number.Display();
+
+	}
+	
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package s0410;
+import java.util.Scanner;
+class Bill{
+	String name;
+	int units;
+	double bill;
+	void Data() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter name of consumer");
+		name = sc.nextLine();
+		System.out.println("Enter electricity unis consumed");
+		units = sc.nextInt();
+		
+	}
+	
+	void Billing() {
+		if(units<=100)
+		{
+			bill = units*2;
+			System.out.println("Your bill = "+bill);
+		}
+		else if(units>100 && units<=200)
+		{
+			bill = units*3;
+			System.out.println("Your bill = "+bill);
+		}
+		else if(units>200 && units<=300)
+		{
+			bill = units*5;
+			System.out.println("Your bill = "+bill);
+		}
+		else
+		{
+			bill = units*5;
+			double surcharge = bill+(bill*2.5)/100;
+			bill = surcharge;
+			System.out.println("Your bill with surcharge of 2.5%  = "+bill);
+		}
+	}
+}
+
+public class ElectricityBill {
+
+	public static void main(String[] args) {
+		Bill billing = new Bill();
+		billing.Data();
+		billing.Billing();
+		System.out.println("Name of consumer : "+billing.name);
+		System.out.println("Unis consumed : "+billing.units);
+		
+
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////
